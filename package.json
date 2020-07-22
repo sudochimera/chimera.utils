@@ -1,0 +1,58 @@
+{
+  "name": "chimera-utils",
+  "version": "1.0.17",
+  "description": "A Node.js collection of utilities useful for Chimera developers",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "config.json",
+    "index.d.ts",
+    "dist/ChimeraUtils.js",
+    "lib/*"
+  ],
+  "engines": {
+    "node": ">=8"
+  },
+  "scripts": {
+    "test": "standard && mocha tests/tests.js",
+    "build-docs": "jsdoc -c jsdoc.json",
+    "prepare": "webpack"
+  },
+  "keywords": [
+    "Chimera",
+    "Utilities"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tylersisia/chimera-utils.git"
+  },
+  "author": "Brandon Lehmann <brandonlehmann@gmail.com>",
+  "contributors": [
+    "zpalmtree <22151537+zpalmtree@users.noreply.github.com>"
+  ],
+  "license": "GPL-3.0",
+  "optionalDependencies": {
+    "chimera-crypto": "^3.1.0"
+  },
+  "dependencies": {
+    "crc": "^3.8.0",
+    "get-random-values": "^1.2.0",
+    "numeral": "^2.0.6",
+    "secure-random-string": "^1.1.0",
+    "varint": "^5.0.0"
+  },
+  "standard": {
+    "ignore": [
+      "lib/chimera-crypto/chimera-crypto.js",
+      "lib/chimera-crypto/chimera-crypto-wasm.js",
+      "dist/*",
+      "docs/*"
+    ]
+  },
+  "devDependencies": {
+    "mocha": "^6.2.2",
+    "standard": "^14.3.1",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  }
+}
